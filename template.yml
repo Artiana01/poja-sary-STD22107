@@ -67,7 +67,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: hei.school.sarisary.MailboxEventHandler::handleRequest
-      MemorySize: 1024
+      MemorySize: 512
       Role: !Sub '{{resolve:ssm:/poja-sary-std22107/${Env}/execution/role-arn}}'
       FileSystemConfigs:
         - Arn: !Sub '{{resolve:ssm:/poja-sary-std22107/${Env}/efs/access-point/arn}}'
